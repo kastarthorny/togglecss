@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Örnek HTML Website</title>
+    <link rel="stylesheet" href="./styles.css" id="dynamicStyles">
+    <script>
+        let counter = 0;
+
+        function addCSS() {
+            counter++;
+
+
+            if (counter % 2 !== 0) {
+                document.title = 'Örnek HTML Website';
+                
+                
+                const dynamicStyles = document.getElementById("dynamicStyles");
+                dynamicStyles.href = "./styles.css";
+            } else {
+                document.title = 'Örnek CSS Website';
+                
+               
+                const dynamicStyles = document.getElementById("dynamicStyles");
+                dynamicStyles.href = "";
+            }
+        }
+    </script>
+</head>
+<body>
+    
+    <button onclick="addCSS()">CSS Ekle/Çıkar</button>
+
+    
+    <h1>Merhaba, bu bir örnek sayfadır!</h1>
+    <p>Bu sayfa üzerinde dinamik olarak CSS ekleyip çıkaran bir buton bulunmaktadır.</p>
+
+    
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
